@@ -1,17 +1,18 @@
 import React from 'react'
-import {HomeSection, MaxWidth, TextOne, TextTwo, TextThree, HomeSpan} from './home-style'
+// import {HomeSection, MaxWidth, TextOne, TextTwo, TextThree, HomeSpan} from './home-style'
+import {HomeSection} from './home-style'
 
 function Home() {
 
     return (
         <HomeSection>
-            <MaxWidth className="max-width">
+            <div className="container">
                 {/* <div className="home-content"> */}
-                    <TextOne>Hello, My name is </TextOne>
+                    {/* <TextOne>Hello, My name is </TextOne>
                     <TextTwo>Akhtaruzzamn</TextTwo>
-                    <TextThree>And I'am a <HomeSpan>Youtuber</HomeSpan> </TextThree>
+                    <TextThree>And I'am a <HomeSpan>Youtuber</HomeSpan> </TextThree> */}
                 {/* </div> */}
-            </MaxWidth>
+            </div>
         </HomeSection>
         
     )

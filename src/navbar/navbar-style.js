@@ -1,7 +1,7 @@
-// Navbar Styling
-import styled from 'styled-components';
+import styled from 'styled-components'
+import {Navbar} from 'reactstrap'
 
-const Navbar = styled.nav`
+const CustomNavbar = styled(Navbar)`
     position: fixed;
     width: 100%;
     padding: ${props => props.scrolled ? '15px 0' : '30px 0'}; // when page scrolled, navbar padding on 15px
@@ -10,42 +10,28 @@ const Navbar = styled.nav`
     font-family: 'Ubuntu', sans-serif;
 `;
 
-const MaxWidth = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`;
-
+// Navbar brand design
 const Logo = styled.span`
-    font-size: 2rem;
+    font-size: 35px;
     font-weight: 600;
     color: #ffffff;
-    // text-color: #fff;
 
 `;
 
 const LogoSpan = styled.span`
     color: ${props => props.scrolled ? '#ffffff' : 'crimson'}; // when page scrolled, navbar text-color is #ffffff
+
+    &:hover {color: ${props => props.scrolled ? '#81ecec' : '#ffffff'}}
 `;
 
-const ListLink = styled.span`
+// Navbar Link Desingn
+const NavMenu = styled.span`
     color: #ffffff;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 400;
     transition: color 0.3s ease;
- 
+
     &:hover {color: ${props => props.scrolled ? 'aqua' : 'crimson'}}; // when page scrolled, navbar text-color is aqua
 `;
 
-const NavList = styled.li`
-    list-style: none;
-    display: inline-block;
-`;
-
-const Menu = styled.ul`
-    color: #fff;
-`;
-
-
-export {Navbar, MaxWidth, Logo, ListLink, NavList, Menu, LogoSpan}
+export {CustomNavbar, Logo, LogoSpan, NavMenu}
