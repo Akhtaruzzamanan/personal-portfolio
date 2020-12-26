@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import {Navbar} from 'reactstrap'
+import {Navbar } from 'reactstrap'
 
 const CustomNavbar = styled(Navbar)`
     position: fixed;
     width: 100%;
-    padding: ${props => props.scrolled ? '15px 0' : '30px 0'}; // when page scrolled, navbar padding on 15px
+    z-index: 999;
+    padding: ${props => props.scrolled ? '5px 0' : '20px 0'}; // when page scrolled, navbar padding on 15px
     background-color: ${props => props.scrolled ? 'crimson' : 'none'}; // when page scrolled, navbar background-color is crimson
     transition: all 0.3s ease;
     font-family: 'Ubuntu', sans-serif;
@@ -15,6 +16,7 @@ const Logo = styled.span`
     font-size: 35px;
     font-weight: 600;
     color: #ffffff;
+    cursor: pointer;
 
 `;
 
@@ -28,7 +30,8 @@ const LogoSpan = styled.span`
 const NavMenu = styled.span`
     color: #ffffff;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    cursor: pointer;
     transition: color 0.3s ease;
 
     &:hover {color: ${props => props.scrolled ? 'aqua' : 'crimson'}}; // when page scrolled, navbar text-color is aqua
