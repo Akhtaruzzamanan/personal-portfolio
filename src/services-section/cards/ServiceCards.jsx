@@ -29,6 +29,7 @@ const ServiceIcon = styled.i`
 
 const ServiceHeading = styled.h4`
     font-weight: 500;
+    color: #ffffff;
 `;
 
 const ServicePara = styled.p`
